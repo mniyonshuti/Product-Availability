@@ -6,7 +6,7 @@ class HomeComponent extends Component {
     products: [],
   };
   componentDidMount() {
-    axios.get("http://localhost:8080/product").then((result) => {
+    axios.get("http://localhost:8080/product/unique").then((result) => {
       console.log(result);
       this.setState({ products: result.data });
     });
